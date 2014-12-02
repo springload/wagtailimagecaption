@@ -1,0 +1,26 @@
+div.richtext a.captionimage-control {
+    position: relative;
+    left: auto;
+    right: auto;
+    cursor: pointer;
+    display: none;
+
+    &:before{
+        background-color:rgba(255,255,255,0.8);
+    }
+    &:hover:before{
+        background-color:white;
+    }
+}
+
+div.richtext a.captionimage-control.right {
+    right:0;
+}
+
+div.richtext a.captionimage-control.left {
+    left:0;
+}
+
+div.richtext.inEditMode a.captionimage-control {
+    display: block;
+}

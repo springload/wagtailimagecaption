@@ -1,0 +1,22 @@
+{% load wagtailcore_tags %}
+{% load i18n %}
+{% trans "Set caption" as caption_str %}
+{% include "wagtailadmin/shared/header.html" with title=caption_str merged=1 tabbed=1 icon="image" %}
+
+<section id="caption" class="active nice-padding">
+    <form class="caption-form" action="{% url 'imagecaption_chosen' image_id %}" method="POST" autocomplete="off">
+        {% csrf_token %}
+        <ul class="fields">
+            {% for field in form %}
+                {% include "wagtailadmin/shared/field_as_li.html" with field=field %}
+                {{ field.errors }}
+            {% endfor %}
+            <li class="submit">
+                <input type="submit" value="{{ caption_str }}" />
+                {% if caption %}
+                <a href="{% url 'imagecaption_remove' image_id %}" class="delete-caption button button-secondary no">Delete caption</a>
+                {% endif %}
+            </li>
+        </ul>
+    </form>
+</section>
