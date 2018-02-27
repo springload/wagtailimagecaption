@@ -1,4 +1,4 @@
-# wagtailimagecaption
+# Wagtail Image Caption
 
 > Images captions for Wagtail
 
@@ -7,7 +7,7 @@
 ## Quickstart
 
 ```sh
-pip install wagtailimagecaption [GITHUB SSH URI]
+pip install git+https://github.com/springload/wagtailimagecaption.git
 ```
 
 Add wagtailimagecaption to your settings.py in the INSTALLED_APPS section:
