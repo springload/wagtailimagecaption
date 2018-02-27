@@ -1,3 +1,5 @@
+**!! WARNING: This repo isn't maintained anymore !!**
+
 # Wagtail Image Caption
 
 > Images captions for Wagtail
